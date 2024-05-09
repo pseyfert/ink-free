@@ -8,9 +8,9 @@
 
 		<h1 class="page-title">Tag: {{ .Title }}</h1>
 
-		{{ with (.Site.GetPage .Title) }}
 		<ul class="posts flat">
-			{{ range .Pages }}
+
+			{{- range .Pages -}}
 			<li class="post">
 				<div class="post-header">
 					<div class="meta">
@@ -35,9 +35,8 @@
 					</div>
 				</div>
 			</li>
-			{{ end }}
+			{{- end -}}
 		</ul>
-		{{ end }}
 	</div>
 
 	{{ partial "footer.html" . }}
